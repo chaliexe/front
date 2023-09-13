@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "front": {
+    "PFfront": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/front",
+            "outputPath": "dist/pffront",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,14 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/primeng/resouces/primeng.min.css",
-              "node_modules/primeng/resouces/theme/nova/theme.css",
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/@fullcalendar/core/main.min.css",
-              "node_modules/@fullcalendar/daygrid/main.min.css",
-              "node_modules/@fullcalendar/timegrid/main.min.css"
-              
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -67,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "front:build:production"
+              "browserTarget": "PFfront:build:production"
             },
             "development": {
-              "browserTarget": "front:build:development"
+              "browserTarget": "PFfront:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "front:build"
+            "browserTarget": "PFfront:build"
           }
         },
         "test": {
@@ -101,8 +94,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
