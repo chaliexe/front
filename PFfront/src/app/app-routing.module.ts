@@ -10,7 +10,7 @@ import { RegisterComponent } from './components/register/register.component';
 
 const routes :Routes=[
     {path:'home', component:HomeComponent},
-    {path:'login', component:LoginComponent, pathMatch: "full"},
+    {path:'login', component:LoginComponent},
     {path:'register', component:RegisterComponent},
     {path:'market', component:MarketComponent},
     {path:'shift', component:ShiftComponent},
