@@ -11,6 +11,7 @@ import { MarketComponent } from './components/market/market.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 
@@ -24,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
     RegisterComponent,
     NavComponent,
     FooterComponent,
+    CartComponent,
  
   ],
   imports: [
