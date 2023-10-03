@@ -9,10 +9,8 @@
   background-color: #252525;
   color: #fff;
   font-size: 12px;
-  position: absolute;
-  bottom: 0;
+  position:absolute;
+  bottom:0;
   width: 100%;
   z-index: 10;
-
-
 }
