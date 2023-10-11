@@ -1,13 +1,32 @@
 
-
-<div class="login"  >
+<div class="login" >
     <form class="custom-form" method="post">
-      <h1>Login</h1>
-      <input
-        type="email"
-        [(ngModel)]="email"
-        name="email"
-        placeholder="Email"
+      <div class="card-header">
+        <div>
+          <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link activate" routerLink="/login">Log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/register">New Account</a>
+          </li>
+        </ul>
+        </div>
+      
+      </div>
+      <div class="card-body">
+        <select class="form-select form-select-lg mb-3" aria-label="Large select example" [(ngModel)]="rol" name="mySelect">
+          <option selected>Log in AS</option>
+          <option value="admin">Admin</option>
+          <option value="Customer">Customer</option>
+        </select>
+        
+      <div *ngIf="rol === 'admin'">
+        <input
+        type="username"
+        [(ngModel)]="username"
+        name="username"
+        placeholder="username"
         required="required"
       />
       <input
@@ -17,9 +36,27 @@
         placeholder="Password"
         required="required"
       />
-      <button type="submit" (click)="login()">Log in</button>
-    </form>
-    <div style="display: flex; justify-content: center; align-items: center;">
-      <h3>If you don't have an account,  <a routerLink="register">Register</a></h3>
-    </div>
-  </div>
+      <button type="submit" (click)="onLoginAdmin()">Log in</button>
+      </div>
+      <div *ngIf="rol === 'Customer'">
+        <input
+        type="username"
+        [(ngModel)]="username"
+        name="username"
+        placeholder="username"
+        required="required"
+      />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+        required="required"
+      />
+      <button type="submit" (click)="onLoginCustomer()">Log in</button>
+      </div>
+        
+      
+  </div> 
+
+  

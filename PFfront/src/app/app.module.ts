@@ -10,9 +10,10 @@ import { ShiftComponent } from './components/shift/shift.component';
 import { MarketComponent } from './components/market/market.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NavComponent } from './components/nav/nav.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/cart/cart.component';
 
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { CartComponent } from './components/cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
